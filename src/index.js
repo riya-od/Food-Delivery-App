@@ -10,6 +10,7 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 import ErrorPage from "./components/ErrorPage";
 import RestaurantMenuPage from "./components/RestaurantMenuPage";
+import Login from "./components/Login";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const appRouter = createBrowserRouter([
@@ -32,6 +33,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurant/:resId",
         element: <RestaurantMenuPage />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
       },
     ],
     errorElement: <ErrorPage />,
