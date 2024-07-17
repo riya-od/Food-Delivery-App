@@ -1,8 +1,9 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
+import Contact from "./components/Contact";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test("should load contact component", () => {
+  render(<Contact />);
+  const heading = screen.getByRole("heading");
+  expect(heading).toBeInTheDocument();
 });
